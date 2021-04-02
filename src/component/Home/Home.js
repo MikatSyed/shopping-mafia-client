@@ -11,6 +11,19 @@ const Home = () => {
 
     },[])
     return (
+        <div>
+
+<div class="textcenter">
+<nav class="navbar navbar-light ">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+    <button class="btn btn-success my-2 my-sm-0 " type="submit">Search Product </button>
+  </form>
+</nav>
+</div>
+
+
+
         <div style={{display:'grid',
         gridTemplateColumns:'repeat(3,1fr)',
         gridGap:'.8rem'
@@ -19,6 +32,7 @@ const Home = () => {
                 elements.map(element => <Product element={element}></Product>)
             }
           
+        </div>
         </div>
     );
 };

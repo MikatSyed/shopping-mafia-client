@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import { UserContext } from '../App';
 
 // import axios from 'axios'
@@ -20,10 +21,24 @@ const Destination = () => {
     },[])
     return (
         <div>
-           <h2>This is destination...</h2>
+           <h2>Checkout</h2>
        {
-            checkout.map(pb => <li>{pb.name}</li>)
-       }
+            checkout.map(pb =><table  style={{width:'50%',borderCollapse:'collapse'}}>
+            <tr>
+              <th style={{border:'1px solid green'}}>Product</th>
+              <th style={{border:'1px solid green'}}>Price</th>
+             
+            </tr>
+            <tr>
+              <td style={{border:'1px solid green'}}>{pb.name}</td>
+              <td style={{border:'1px solid green'}}>{pb.price}</td>
+          
+            </tr>
+           
+          </table>
+            )}
+           <Link to="/order"> <button class="btn btn-success">Checkout</button></Link>
+          
         </div>
     );
 };

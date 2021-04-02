@@ -32,8 +32,8 @@ const Login = () => {
           });
     }
     return (
-        <div>
-            <h1>This is Login</h1>
+        <div style={{marginLeft:'545px'}}>
+            <h1> Login</h1>
             <button onClick={handleGoogleSignIn} className="btn btn-success">Google Sign in</button>
         </div>
     );

@@ -40,14 +40,14 @@ function App() {
          <Login/>
            </Route>
 
-           <Route  path="/addproduct">
+           <PrivateRoute  path="/addproduct">
              <AddProduct/>
          
-           </Route>
+           </PrivateRoute>
  
-        <Route path="/order">
+        <PrivateRoute path="/order">
         <Order/>
-        </Route>
+        </PrivateRoute>
 
         
           
