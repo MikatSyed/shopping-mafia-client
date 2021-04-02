@@ -13,7 +13,7 @@ const AddProduct = () => {
             price : data.price
          
         };
-        const url = `http://localhost:5055/addElement`
+        const url = `https://arcane-atoll-67843.herokuapp.com/addElement`
       
         fetch(url,{
             method: 'POST',

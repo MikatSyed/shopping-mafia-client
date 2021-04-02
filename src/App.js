@@ -52,7 +52,7 @@ function App() {
         
           
 
-        <PrivateRoute path="/destination">
+        <PrivateRoute exact path="/destination/:productId">
           <Destination/>
            </PrivateRoute>
 

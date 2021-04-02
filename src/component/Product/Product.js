@@ -19,7 +19,7 @@ const Product = ({element}) => {
     <h3 class="card-text">{element.name}</h3>
     <h4 style={{marginLeft:"90px",color:"green"}}>${element.price}</h4>
    
-    <Link to="/destination"> <a href="#" class="btn btn-success" style={{marginLeft : 80}}>Buy Now</a></Link>
+    <Link to={`/destination/${element._id}`}> <a href="#" class="btn btn-success" style={{marginLeft : 80}}>Buy Now</a></Link>
   </div>
 </div>
 
