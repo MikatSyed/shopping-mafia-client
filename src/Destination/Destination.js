@@ -2,10 +2,13 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../App';
+import Order from '../Order/Order';
+import {DestinationContext} from './DestinationContext';
 
 // import axios from 'axios'
 
 const Destination = () => {
+    const {setOrders} = useContext(DestinationContext)
     const{id}= useParams();
     const [loggedInUser,setLoggedInUser]= useContext(UserContext)
     const[checkout,setCheckout] = useState([]);
@@ -16,12 +19,17 @@ const Destination = () => {
         //     console.log(checkout)
         fetch(`https://arcane-atoll-67843.herokuapp.com/events/${productId}`)
         .then(res=> res.json())
-        .then(data => setCheckout(data))
+        .then(data => {
+            setCheckout(data)
+            setOrders(data)
+        })
+
         // })
     },[])
     return (
         <div>
            <h2>Checkout</h2>
+          
        {
             checkout.map(pb =><table  style={{width:'50%',borderCollapse:'collapse'}}>
             <tr>

@@ -15,7 +15,7 @@ import AddProduct from './component/AddProduct/AddProduct';
 import Login from './component/Login/Login';
 import Destination from './Destination/Destination';
 import Order from './Order/Order';
-
+import {DestinationProvider} from './Destination/DestinationContext'
 
 
 export const UserContext = createContext();
@@ -29,7 +29,7 @@ function App() {
      
      
     <Router>
-    <Header/>
+      <DestinationProvider>    <Header/>
       <Switch>
 
       <Route   path="/home">
@@ -67,6 +67,8 @@ function App() {
 
 
       </Switch>
+      </DestinationProvider>
+
     </Router>
     </UserContext.Provider>
 

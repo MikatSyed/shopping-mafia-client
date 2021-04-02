@@ -20,6 +20,7 @@ const Product = ({element}) => {
     <h4 style={{marginLeft:"90px",color:"green"}}>${element.price}</h4>
    
     <Link to={`/destination/${element._id}`}> <a href="#" class="btn btn-success" style={{marginLeft : 80}}>Buy Now</a></Link>
+    
   </div>
 </div>
 
